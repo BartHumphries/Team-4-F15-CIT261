@@ -15,6 +15,7 @@ var markersArray;
 /*********************************/
 
 window.addEventListener('load', function() {
+    setLogoTransition()
     markersArray = new Array();
     modal_init();
 
@@ -377,4 +378,10 @@ var modal_init = function() {
 	document.getElementById("modal_close").attachEvent("onclick", closeModal);
         document.attachEvent("onkeydown", keyHandler);
     }
+    
+   function setLogoTransition() {
+   document.getElementById("transition").style.WebkitTransform = "translateX(500px)";
+   document.getElementById("transition").style.transition = "all 2s"; 
+   document.getElementById("transition").style.transition = "all 6s"; 
+   }
 };
